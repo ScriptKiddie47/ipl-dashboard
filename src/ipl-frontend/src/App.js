@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { TeamPage } from './pages/teampage';
 import { MatchPage } from './pages/matchPage';
@@ -21,5 +21,4 @@ function App() {
 }
 
 export default App;
-
 //Lets Use the TeamPage Component for the Heading
