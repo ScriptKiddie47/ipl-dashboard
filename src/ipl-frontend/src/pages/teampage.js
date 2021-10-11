@@ -4,6 +4,7 @@ import { MatchDetailedCard } from '../components/MatchDetailCard';
 import { MatchSmallCard } from '../components/MatchSmallCard';
 import './teamPage.scss';
 import { PieChart } from 'react-minimal-pie-chart';
+import { Link } from 'react-router-dom';
 
 export const TeamPage = () => {
 
@@ -50,7 +51,7 @@ export const TeamPage = () => {
                 <MatchSmallCard teamName={team.teamName} match={match} />)}
 
             <div className="more-link">
-                <a href="#">More {'>'}</a>
+                <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More {'>'}</Link>
             </div>
         </div>
     );

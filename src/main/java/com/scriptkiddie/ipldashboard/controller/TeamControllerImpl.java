@@ -2,6 +2,8 @@ package com.scriptkiddie.ipldashboard.controller;
 
 import java.time.LocalDate;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,11 +20,18 @@ import com.scriptkiddie.ipldashboard.repository.TeamRepository;
 @RestController
 @CrossOrigin
 public class TeamControllerImpl {
+	private static final Logger log = LoggerFactory.getLogger(TeamControllerImpl.class);
 
 	@Autowired
 	private TeamRepository teamRepository;
 	@Autowired
 	private MatchRepository matchRepository;
+	
+	@RequestMapping(value = "/team")
+	public ResponseEntity<?> getAllTeams(){
+		log.info("DB call to Get All teams");
+		return ResponseEntity.ok(teamRepository.findAll());
+	}
 
 	@RequestMapping(value = "/team/{teamName}", method = RequestMethod.GET)
 	public ResponseEntity<?> getTeam(@PathVariable String teamName) {
