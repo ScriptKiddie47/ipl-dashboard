@@ -4,7 +4,6 @@ import './MatchDetailCard.scss'
 
 export const MatchDetailedCard = ({ match, teamName }) => {
     if (!match) return null;
-    console.log(teamName);
     const otherTeam = match.team1 === teamName ? match.team2 : match.team1
     const otherTeamRoute = `/teams/${otherTeam}`
     const isMatchWon = teamName === match.matchWinner;

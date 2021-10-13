@@ -20,10 +20,9 @@ export const HomePage = () => {
             <div className="header-section">
                 <h1 className="app-name">ipl-dashboard</h1>
             </div>
-            {console.log(teams)}
             <div className="team-grid">
                 {
-                    teams.map(team => <TeamTile teamName={team.teamName} />)
+                    teams.map(team => <TeamTile key={team.id} teamName={team.teamName} />)
                 }
             </div>
         </div>
