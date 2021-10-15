@@ -1,6 +1,6 @@
 # ipl-dashboard
 
-Spring Boot Service - Maven
+Spring Boot + React Application
 
 ### Developer Notes : 
 To run the service , simply run the IplDashboardApplication  as Java Application\
