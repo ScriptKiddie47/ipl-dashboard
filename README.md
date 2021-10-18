@@ -9,7 +9,9 @@ To see the developed changes on the React - App , run command on the React Appli
 The above command will deploy the changes to src --> resources --> public\
 Run the Spring Boot application and you will be see react changes being application in the webpage.
 
+### Main Page
 
 ![image](https://user-images.githubusercontent.com/59485946/137789457-751c8fc7-0b1c-4d3f-8992-46e93b5bfb7a.png)
 
-
+### By Team
+![image](https://user-images.githubusercontent.com/59485946/137789595-09a4217d-2470-469e-9d93-d946a34e4f11.png)
